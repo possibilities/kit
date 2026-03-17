@@ -42,7 +42,7 @@ class CodeSearcher:
         if gitignore_path.exists():
             try:
                 with open(gitignore_path, "r", encoding="utf-8") as f:
-                    return pathspec.PathSpec.from_lines("gitwildmatch", f)
+                    return pathspec.PathSpec.from_lines("gitignore", f)
             except Exception as e:
                 # Log this error if logging is set up, or print
                 print(f"Warning: Could not load .gitignore: {e}")

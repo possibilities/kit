@@ -33,7 +33,7 @@ class RepoMapper:
         gitignore_path = self.repo_path / ".gitignore"
         if gitignore_path.exists():
             with open(gitignore_path) as f:
-                return pathspec.PathSpec.from_lines("gitwildmatch", f)
+                return pathspec.PathSpec.from_lines("gitignore", f)
         return None
 
     def _should_ignore(self, file: Path) -> bool:
